@@ -1,0 +1,56 @@
+.cf::after,
+.clearflf::after,
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 전역적으로 사용하기위해 따로 만들고 필요할때 적용하기 */
+/* 세팅 css */
+
+.float01 {
+    padding: 100px 0;
+}
+
+.float01 h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.float01 p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.float01 .container {
+    width: 1200px;
+    margin: 0 auto;
+    background: #f00;
+    /* overflow: hidden;
+     float에 뒷요소가 붙지않게 하는 방법 3
+    (간단하게 만드는 경우에는 필요하다 권장하진 않음) */
+
+    /* height: 16px; 
+    float에 뒷요소가 붙지않게 하는 방법 1
+    (박스에 높이를 주는건 안좋은 상황이라 사용하지않음)*/
+}
+
+.float01 .container .con {
+    /* flex 없이 가로 배치하기 */
+    float: left;
+    background: #ff0;
+}
+
+/* clearfix */
+/* .float01 .container::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+/* float에 뒷요소가 붙지않게 하는 방법 4
+방법 2 에 박스를 만들지 않고 가상요소로 적용하는 방법*/
